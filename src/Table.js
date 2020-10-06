@@ -3,16 +3,18 @@ import './Table.css';
 
 const Table = ({ countries }) => {
   return (
-    <div className="table">
-      {countries.map(({ country, cases }) => (
-        <tr>
-          <td>{country}</td>
-          <td>
-            <strong>{cases}</strong>
-          </td>
-        </tr>
-      ))}
-    </div>
+    <table className="table">
+      <tbody>
+        {countries.map(({ country, cases }) => (
+          <tr key={country}>
+            <td>{country}</td>
+            <td>
+              <strong>{cases}</strong>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 
